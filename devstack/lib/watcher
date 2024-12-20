@@ -261,10 +261,10 @@ function init_watcher {
     # create required data files
     if is_service_enabled $DATABASE_BACKENDS && is_service_enabled watcher-api; then
         # (Re)create watcher database
-        recreate_database watcher
+        #recreate_database watcher
 
         # Create watcher schema
-        $WATCHER_BIN_DIR/watcher-db-manage --config-file $WATCHER_CONF upgrade
+        #$WATCHER_BIN_DIR/watcher-db-manage --config-file $WATCHER_CONF upgrade
     fi
     create_watcher_cache_dir
 }
